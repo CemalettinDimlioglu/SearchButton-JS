@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+     font-family: "Inter", sans-serif;
+     background: linear-gradient(180deg, navy, #08d2e5);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     margin: 0;
+     overflow: hidden;
+
+}
+.search{
+     position: relative;
+     height: 50px;
+     /* background-color: yellow; */
+     /* Bu CSS kod bloğu, HTML'deki .search sınıfına sahip öğeye birkaç stil özelliği uygular.
+position özelliği, öğenin yerleştirilme türünü belirler. Bu stil tanımında relative değeri kullanılarak, öğenin mevcut konumuna göre yerleştirilmesi sağlanır.
+height özelliği, öğenin yüksekliğini belirler. Bu stil tanımında öğenin yüksekliği 50 piksel olarak ayarlanır.
+Bu kod bloğu özellikle bir arama kutusu gibi bir öğe için yararlı olabilir. Öğenin position özelliği "relative" olarak belirtilerek, öğenin diğer öğelere göre konumlandırılması sağlanır. height özelliği ise öğenin yüksekliğinin ayarlanmasını sağlar. Bu özellikler, öğenin boyutunu ve yerleştirilmesini diğer öğelerle uyumlu hale getirerek, tasarımın tutarlılığını sağlar. */
+} 
+
+.search .input{
+     font-family: inherit;
+     background-color: #fff;
+     border: 0;
+     font-size: 16px;
+     padding: 15px;
+     height: 50px;
+     width: 50px;
+     transition:width 0.3s ease ;
+      
+     /* Bu CSS kod bloğu, .search sınıfına sahip bir öğenin içindeki .input sınıfına sahip öğeye birkaç stil özelliği uygular.
+font-family özelliği, yazı tipi ailesinin öğede kullanılacağını belirler. Bu stil tanımında "inherit" değeri kullanılarak, yazı tipi ailesinin öğenin üst öğesinden miras alınmasını sağlar.
+background-color özelliği, arka plan rengini belirler. Bu stil tanımında beyaz bir renk (#fff) kullanılır.
+border özelliği, öğenin kenarlık özelliklerini belirler. Bu stil tanımında sınır olmadığı için (border: 0) kenarlıkları olmayan bir giriş kutusu oluşturulur.
+font-size özelliği, metin boyutunu belirler. Bu stil tanımında metin boyutu 16 piksel olarak ayarlanır.
+padding özelliği, içeriğin öğe içindeki kenarlardan ne kadar uzakta olacağını belirler. Bu stil tanımında, öğenin içeriğinin üst, alt, sağ ve solunda 15 piksel boşluk bırakılacak şekilde ayarlanır.
+height özelliği, öğenin yüksekliğini belirler. Bu stil tanımında öğenin yüksekliği 50 piksel olarak ayarlanır.
+width özelliği, öğenin genişliğini belirler. Bu stil tanımında öğenin genişliği 50 piksel olarak ayarlanır.
+transition özelliği, öğenin stil değişikliklerinin animasyonlu bir şekilde yapılmasını sağlar. Bu stil tanımında, öğenin genişliğinin değişmesi durumunda 0.3 saniye süreyle animasyonlu bir geçiş yapması sağlanır.
+Bu kod bloğu özellikle bir arama kutusu gibi bir öğe için yararlı olabilir. Öğenin içeriği, .input sınıfına sahip bir öğe kullanılarak belirlenir. Bu özellikler, giriş kutusunun boyutunu, konumunu, kenarlıklarını ve diğer stil özelliklerini belirleyerek, arama kutusu gibi bir öğenin görünümünü düzenler. */
+}
+.btn{
+     background-color: #fff;
+     color: magenta;
+     border: none;
+     cursor: pointer;
+     font-size: 24px;
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 50px;
+     height: 50px;
+     transition: transform 0.3s ease;
+     
+}
+.input:focus, .btn:focus{
+     outline: none;
+}
+
+.search.active .input{
+     width: 200px;
+
+     /* Bu CSS kod bloğu, .search öğesi etkin olduğunda (yani .active sınıfına sahip olduğunda), .input öğesinin genişliğinin 200px olarak ayarlanmasını sağlar. Bu, kullanıcının arama kutusuna tıkladığında veya arama butonuna tıkladığında arama kutusunun genişlemesini sağlayarak, kullanıcının arama sorgusu için daha fazla metin girebilmesine olanak tanır. transition özelliği, width stil özelliğindeki değişikliğin 0.3 saniyelik bir süre içinde gerçekleşmesini sağlar, böylece arama kutusunun boyutu aniden değişmez, aksine yavaşça genişler veya daralır. */
+}
+
+.search.active .btn{
+     transform: translateX(198px);
+}
